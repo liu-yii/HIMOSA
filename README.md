@@ -26,8 +26,8 @@ python setup.py develop
 
 ## :rocket:Training
 ### Data Preparation
-- Download the training dataset [Satlaspretrain](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [AID](https://data.vision.ee.ethz.ch/cvl/DIV2K/).
-- Download the testing data [NWPU](https://drive.google.com/file/d/1_FvS_bnSZvJWx9q4fNZTR8aS15Rb0Kc6/view?usp=sharing), [DOTA](https://data.vision.ee.ethz.ch/cvl/DIV2K/), [DIOR](https://data.vision.ee.ethz.ch/cvl/DIV2K/).
+- Download the training dataset [Satlaspretrain](https://satlas-pretrain.allen.ai/) and [AID](https://captain-whu.github.io/AID/).
+- Download the testing data [NWPU](https://gcheng-nwpu.github.io/#Datasets), [DOTA](https://captain-whu.github.io/DOTA/dataset.html), [DIOR](https://ieee-dataport.org/documents/dior).
 - It's recommended to refer to the data preparation from [BasicSR](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md) for faster data reading speed.
 
 ### Training Commands
@@ -46,7 +46,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --standalone --nnodes=1 --nproc_per_node=4
 ## :wrench:Testing
 
 ### Pretrained Models
-- Download the [pretrained models](https://github.com/EquationWalker/CATANet/releases/tag/v0.0) and put them in the folder `./pretrained_models`.
+- Download the [pretrained models](https://drive.google.com/file/d/1QcQvpYIVSjxWyteQar5gbCW97ntag837/view?usp=drive_link) and put them in the folder `./pretrained_models`.
 
 ### Testing Commands
 - Refer to the testing configuration files in `./options/test` folder for detailed settings.
