@@ -5,6 +5,8 @@ datasets
 weights
 logs
 demo
+cem/results
+cem/SR-CEM
 pretrained_models
 paperwrite.md
 visual
