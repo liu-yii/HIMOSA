@@ -1,0 +1,7 @@
+setup.py
+/mnt/E/code/CATANet/ops_smm/src/smm_cuda.cu
+smm_cuda.egg-info/PKG-INFO
+smm_cuda.egg-info/SOURCES.txt
+smm_cuda.egg-info/dependency_links.txt
+smm_cuda.egg-info/requires.txt
+smm_cuda.egg-info/top_level.txt
