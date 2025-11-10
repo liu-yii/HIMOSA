@@ -1,3 +1,6 @@
+.vscode
+.eggs
+basicsr.egg-info
 experiments
 tb_logger
 results
@@ -7,6 +10,7 @@ logs
 demo
 cem/results
 cem/SR-CEM
+options
 pretrained_models
 paperwrite.md
 visual
