@@ -1,4 +1,4 @@
-name: 103_HIMoSAv1_light_SRx4_finetune_noConvGLU
+name: 103_HIMoSAv1_SRx4_finetune
 model_type: HIMOSAModel
 scale: 4
 num_gpu: 1  # set num_gpu: 0 for cpu mode
@@ -257,7 +257,7 @@ network_g:
   embed_dim: 60
   depths: [6, 6, 6, 6, ]
   num_heads: [6, 6, 6, 6, ]
-  mosa_heads: [8,8,8,8]
+  mosa_heads: [8, 8, 8, 8]
   sparsity: [1, 1, 2, 4, 8, 12]
   base_win_size: [8, 8]
   reducted_dim: 8
@@ -271,10 +271,10 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/103_HIMOSA_light_SRx4_ca_lr5e-4_sp1124812/models/net_g_130000.pth
+  pretrain_network_g: ~
   strict_load_g: true
   param_key_g: params_ema
-  results_root: results/demo
+  results_root: ~
 
 # validation settings
 val:
