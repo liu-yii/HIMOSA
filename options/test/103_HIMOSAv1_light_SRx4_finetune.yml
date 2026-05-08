@@ -1,0 +1,296 @@
+name: 103_HIMoSAv1_light_SRx4_finetune_noConvGLU
+model_type: HIMOSAModel
+scale: 4
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+datasets:
+  test_1: 
+    name: Airport
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Airport
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Airport
+    io_backend:
+      type: disk
+
+  test_2: 
+    name: Bareland
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/BareLand
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/BareLand
+    io_backend:
+      type: disk
+
+  test_3:
+    name: BaseballField
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/BaseballField
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/BaseballField
+    io_backend:
+      type: disk
+
+  
+  test_4:
+    name: Beach
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Beach
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Beach
+    io_backend:
+      type: disk
+
+  test_5:
+    name: Bridge
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Bridge
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Bridge
+    io_backend:
+      type: disk
+
+  test_6:
+    name: Center
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Center
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Center
+    io_backend:
+      type: disk
+
+  test_7:
+    name: Church
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Church
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Church
+    io_backend:
+      type: disk
+
+  test_8:
+    name: Commercial
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Commercial
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Commercial
+    io_backend:
+      type: disk
+
+  test_9:
+    name: DenseResidential
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/DenseResidential
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/DenseResidential
+    io_backend:
+      type: disk
+
+  test_10:
+    name: Desert
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Desert
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Desert
+    io_backend:
+      type: disk
+
+  test_11:
+    name: Farmland
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Farmland
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Farmland
+    io_backend:
+      type: disk
+
+  test_12:
+    name: Forest
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Forest
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Forest
+    io_backend:
+      type: disk
+
+  test_13:
+    name: Industrial
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Industrial
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Industrial
+    io_backend:
+      type: disk
+
+  test_14:
+    name: Meadow
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Meadow
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Meadow
+    io_backend:
+      type: disk
+
+  test_15:
+    name: MediumResidential
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/MediumResidential
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/MediumResidential
+    io_backend:
+      type: disk
+
+  test_16:
+    name: Mountain
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Mountain
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Mountain
+    io_backend:
+      type: disk
+
+  test_17:
+    name: Park
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Park
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Park
+    io_backend:
+      type: disk
+
+  test_18:
+    name: Parking
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Parking
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Parking
+    io_backend:
+      type: disk
+
+  test_19:
+    name: Playground
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Playground
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Playground
+    io_backend:
+      type: disk
+
+  test_20:
+    name: Pond
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Pond
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Pond
+    io_backend:
+      type: disk
+  
+  test_21:
+    name: Port
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Port
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Port
+    io_backend:
+      type: disk
+
+  test_22:
+    name: RailwayStation
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/RailwayStation
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/RailwayStation
+    io_backend:
+      type: disk
+
+  test_23:
+    name: Resort
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Resort
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Resort
+    io_backend:
+      type: disk
+
+  test_24:
+    name: River
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/River
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/River
+    io_backend:
+      type: disk
+
+  test_25:
+    name: School
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/School
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/School
+    io_backend:
+      type: disk
+
+  test_26:
+    name: SparseResidential
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/SparseResidential
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/SparseResidential
+    io_backend:
+      type: disk
+
+  test_27:
+    name: Square
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Square
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Square
+    io_backend:
+      type: disk
+
+  test_28:
+    name: Stadium
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Stadium
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Stadium
+    io_backend:
+      type: disk
+
+  test_29:
+    name: StorageTanks
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/StorageTanks
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/StorageTanks
+    io_backend:
+      type: disk
+
+  test_30:
+    name: Viaduct
+    type: PairedImageDataset
+    dataroot_gt: /mnt/E/datasets/RSISR/AID_SR/test/AID900/GT/Viaduct
+    dataroot_lq: /mnt/E/datasets/RSISR/AID_SR/test/AID900/LR_x4/Viaduct
+    io_backend:
+      type: disk
+  
+  
+
+# network structures
+network_g:
+  type: HIMOSAv1
+  upscale: 4
+  in_chans: 3
+  img_size: 64
+  embed_dim: 60
+  depths: [6, 6, 6, 6, ]
+  num_heads: [6, 6, 6, 6, ]
+  mosa_heads: [8,8,8,8]
+  sparsity: [1, 1, 2, 4, 8, 12]
+  base_win_size: [8, 8]
+  reducted_dim: 8
+  convffn_kernel_size: 7
+  img_range: 1.
+  mlp_ratio: 1
+  upsampler: 'pixelshuffledirect'
+  resi_connection: '1conv'
+  use_checkpoint: false
+  hier_win_ratios: [0.5,1,2,4,6,8]
+
+# path
+path:
+  pretrain_network_g: experiments/103_HIMOSA_light_SRx4_ca_lr5e-4_sp1124812/models/net_g_130000.pth
+  strict_load_g: true
+  param_key_g: params_ema
+  results_root: results/demo
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
+    # niqe:
+    #   type: calculate_niqe
+    #   crop_border: 4
+    #   test_y_channel: true
